@@ -1,0 +1,19 @@
+/*
+******
+Home Page - Word Animation
+******
+*/
+@keyframes animateWord {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-90%);
+  }
+  63% {
+    transform: translateY(-180%);
+  }
+  100% {
+    transform: translateY(-277%);
+  }
+}

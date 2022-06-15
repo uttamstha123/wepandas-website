@@ -40,6 +40,12 @@ h3,
 h4 {
   font-weight: inherit;
 }
+
+/*
+******
+Home Page - Header
+******
+*/
 .container {
   height: 100vh;
   background: var(--bg-clr);
@@ -91,7 +97,7 @@ h4 {
   background: var(--primary-clr);
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 .nav__social {
   max-width: 10rem;
@@ -117,7 +123,12 @@ h4 {
   border-color: var(--primary-clr);
 }
 
-.hero-section {
+/*
+******
+Home Page - Hero Section
+******
+*/
+.section {
   min-height: 90vh;
   display: flex;
   align-items: center;
@@ -153,17 +164,8 @@ h4 {
   color: var(--keyword-clr);
 }
 
-@keyframes animateWord {
-  0% {
-    transform: translateY(0);
-  }
-  33% {
-    transform: translateY(-90%);
-  }
-  63% {
-    transform: translateY(-180%);
-  }
-  100% {
-    transform: translateY(-277%);
-  }
-}
+/*
+******
+  WePlan Page 
+******
+*/

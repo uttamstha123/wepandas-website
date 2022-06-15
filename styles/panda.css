@@ -1,0 +1,165 @@
+/*
+******
+  WePlan Page 
+******
+*/
+
+.img-container {
+  /* height: 90vh;
+      width: 100%; */
+  height: auto;
+  height: 90vh;
+  position: relative;
+}
+
+.outline {
+  display: flex;
+  transform: translateY(25%);
+}
+.outline-box1 {
+  transform: translate(5%, 0);
+  position: relative;
+}
+.outline-box2 {
+  transform: translate(0, -60%);
+}
+.outline-box3 {
+  transform: translate(-3.5%, -1%);
+}
+.outline-box4 {
+  transform: translate(5%, -4%);
+}
+.outline-box5 {
+  align-self: flex-end;
+  transform: translate(0%, 5%);
+}
+.outline-box6 {
+  transform: translate(-10.5%, -4%);
+}
+
+.navigateText {
+  font-size: 3.5rem;
+  font-family: var(--ff-primary);
+  position: absolute;
+  /* display: none; */
+}
+.outline-text1 {
+  left: -15%;
+  top: 20%;
+  display: none;
+}
+.outline-text2 {
+  left: 38%;
+  top: -25%;
+  display: none;
+}
+.outline-text3 {
+  right: -15%;
+  top: 20%;
+  display: none;
+}
+.outline-text4 {
+  left: -20%;
+  bottom: 25%;
+  display: none;
+}
+.outline-text5 {
+  left: 33%;
+  bottom: -20%;
+  display: none;
+}
+.outline-text6 {
+  right: -15%;
+  bottom: 20%;
+  display: none;
+}
+
+.face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -50%);
+  z-index: 1;
+}
+.eye-left {
+  position: absolute;
+  top: 44.5%;
+  left: 33.5%;
+  z-index: 1;
+}
+.eye-right {
+  position: absolute;
+  top: 44.5%;
+  right: 36%;
+  z-index: 1;
+}
+
+.nose {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  z-index: 1;
+}
+
+.mouth {
+  position: absolute;
+  top: 62%;
+  left: 45%;
+  z-index: 1;
+}
+
+.ear-left {
+  position: absolute;
+  top: 26.5%;
+  left: 20%;
+}
+
+.ear-right {
+  position: absolute;
+  top: 26.5%;
+  right: 22%;
+}
+
+path {
+  cursor: pointer;
+}
+/*
+******
+Hover class
+******
+*/
+
+.ear-left-path:hover {
+  fill: var(--primary-clr);
+}
+.ear-right-path:hover {
+  fill: var(--primary-clr);
+}
+.eye-right-path:hover {
+  fill: var(--primary-clr);
+}
+.eye-left-path:hover {
+  fill: var(--primary-clr);
+}
+.nose-path:hover {
+  fill: var(--primary-clr);
+}
+.mouth-path:hover {
+  fill: var(--primary-clr);
+}
+
+/*
+******
+Toggle class
+******
+*/
+.outline-hover {
+  fill: var(--primary-clr);
+}
+.outlineBox-hover {
+  z-index: 2;
+}
+
+.display-navigate-text {
+  display: block;
+}
