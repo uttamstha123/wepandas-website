@@ -11,7 +11,6 @@
   height: 90vh;
   position: relative;
 }
-
 .outline {
   display: flex;
   transform: translateY(25%);
@@ -122,6 +121,7 @@
 
 path {
   cursor: pointer;
+  user-select: none;
 }
 /*
 ******
