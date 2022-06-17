@@ -1,11 +1,10 @@
-const id = sessionStorage.getItem("id");
+const id = sessionStorage.getItem("ID");
 const fetchData = fetch("api/weplan.json");
 fetchData
   .then((result) => {
     return result.json();
   })
   .then((data) => {
-    console.log(data,id);
     let getData = data[id];
     generateData(getData);
   });
@@ -15,7 +14,6 @@ function generateData(data) {
   const title = document.getElementById("title");
   title.classList.add("title");
   // Break two section 'WE' - 'other part'
-  console.log(data);
   title.innerText = data?.title.slice(0, 2); // 'WE'
 
   // create span element for accent text
