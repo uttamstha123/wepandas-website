@@ -1,10 +1,11 @@
 :root {
   /* color */
   --primary-clr: #adadad;
+  --secondary-clr: #5f5f5f;
   --link-clr: #636363;
   --ctn-clr: #212121;
   --bg-clr: #000;
-  --keyword-clr: #43e07d;
+  --accent-clr: #43e07d;
 
   --ff-primary: "Helvetica Now Text", Helvetica;
   --ff-secondary: "Source Sans Pro", sans-serif;
@@ -23,6 +24,31 @@ html {
 body {
   margin: 0;
 }
+/* 
+*******
+Hide Scrollbars
+*******
+*/
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #000 #000;
+}
+body::-webkit-scrollbar-track {
+  background: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+/* 
+******
+Typography
+******
+ */
+
 img {
   max-width: 100%;
 }
@@ -33,7 +59,6 @@ a {
 ul {
   list-style: none;
 }
-
 h1,
 h2,
 h3,
@@ -78,6 +103,7 @@ Home Page - Header
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .nav__links li {
   color: var(--link-clr);
   transition: all 0.15s;
@@ -154,18 +180,97 @@ Home Page - Hero Section
   overflow: hidden;
   font-size: 4.2rem;
 }
-/* toggle class */
+
+/*
+*******
+toggle class 
+*******
+*/
 .animateWord {
   animation: animateWord 4s infinite;
   animation-delay: 1s;
 }
-.words {
-  font-weight: 300;
-  color: var(--keyword-clr);
+.accent-text {
+  font-weight: 100;
+  color: var(--accent-clr);
 }
 
+.active-link {
+  color: var(--primary-clr);
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background: var(--primary-clr);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /*
 ******
-  WePlan Page 
+We Plan Inside
 ******
 */
+.we-section {
+  height: 90vh;
+  max-width: 140rem;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: var(--ff-primary);
+  padding: 2em 4em;
+  /* flex utilities is used  */
+  /* so i can use gap here also */
+  gap: 6em;
+}
+.we-section__content {
+  width: 100%;
+}
+.we-section__content .title {
+  font-size: 5rem;
+}
+
+.we-section__content .description {
+  font-size: 2rem;
+}
+.we-section__content .info {
+  color: var(--secondary-clr);
+  font-weight: 200;
+}
+.we-section__content .title {
+  margin-top: 2rem;
+}
+.we-section__content .description {
+  margin-top: 2.5em;
+  height: 100%;
+  max-width: 70rem;
+  gap: 4.5rem 0;
+}
+.we-section__img {
+  height: 100%;
+  width: 70%;
+  overflow: hidden;
+  background-image: url("../../assets/images/panda-img.png");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: right 80%;
+  border-radius: 2rem;
+}
+
+/* 
+******
+Utilities Class
+******
+*/
+
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
