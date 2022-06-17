@@ -1,10 +1,11 @@
-const id = sessionStorage.getItem("id");
+const id = localStorage.getItem("id");
 const fetchData = fetch("api/weplan.json");
 fetchData
   .then((result) => {
     return result.json();
   })
   .then((data) => {
+    console.log(data,id);
     let getData = data[id];
     generateData(getData);
   });
@@ -14,18 +15,19 @@ function generateData(data) {
   const title = document.getElementById("title");
   title.classList.add("title");
   // Break two section 'WE' - 'other part'
-  title.innerText = data.title.slice(0, 2); // 'WE'
+  console.log(data);
+  title.innerText = data?.title.slice(0, 2); // 'WE'
 
   // create span element for accent text
   const accentText = document.createElement("span");
   accentText.classList.add("accent-text");
-  accentText.innerText = data.title.slice(2); // 'other part'
+  accentText.innerText = data?.title.slice(2); // 'other part'
 
   title.appendChild(accentText);
 
   // Description Section
   const description = document.getElementById("description");
-  data.description.forEach((element) => {
+  data?.description.forEach((element) => {
     // Creating elements
     const container = document.createElement("div");
     const subtitle = document.createElement("h3");

@@ -115,7 +115,6 @@ Home Page - Header
   color: var(--primary-clr);
 }
 
-
 .nav__links li:hover::after {
   content: "";
   position: absolute;
@@ -196,6 +195,20 @@ toggle class
   color: var(--accent-clr);
 }
 
+.active-link {
+  color: var(--primary-clr);
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background: var(--primary-clr);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /*
 ******
 We Plan Inside
@@ -226,22 +239,15 @@ We Plan Inside
   color: var(--secondary-clr);
   font-weight: 200;
 }
-.we-section__content .title{
+.we-section__content .title {
   margin-top: 2rem;
-
 }
-.we-section__content .description{
+.we-section__content .description {
+  margin-top: 2.5em;
   height: 100%;
   max-width: 70rem;
-  justify-content: space-evenly;
+  gap: 4.5rem 0;
 }
-
-/* 
-******
-Utilities Class
-******
-*/
-
 .we-section__img {
   height: 100%;
   width: 70%;
@@ -252,6 +258,13 @@ Utilities Class
   background-position: right 80%;
   border-radius: 2rem;
 }
+
+/* 
+******
+Utilities Class
+******
+*/
+
 .flex {
   display: flex;
 }

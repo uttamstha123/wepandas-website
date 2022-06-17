@@ -129,7 +129,7 @@ Hover class
 ******
 */
 
-.ear-left-path:hover {
+/* .ear-left-path:hover {
   fill: var(--primary-clr);
 }
 .ear-right-path:hover {
@@ -146,14 +146,14 @@ Hover class
 }
 .mouth-path:hover {
   fill: var(--primary-clr);
-}
+} */
 
 /*
 ******
 Toggle class
 ******
 */
-.outline-hover {
+.fill-hover {
   fill: var(--primary-clr);
 }
 .outlineBox-hover {

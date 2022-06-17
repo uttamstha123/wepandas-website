@@ -18,9 +18,11 @@
           </a>
           <ul class="nav__links">
             <li><a href="../index.html">WeThink</a></li>
-            <li><a href="./weplan_page/weplan_inside.html">WePlan</a></li>
-            <li><a href="./weplan_page/weplan_inside.html">WeApp</a></li>
-            <li><a href="./weplan_page/weplan_inside.html">WeHolders</a></li>
+            <li>
+              <a class="active-link" href="../pages/weplan.html">WePlan</a>
+            </li>
+            <li><a href="">WeApp</a></li>
+            <li><a href="">WeHolders</a></li>
           </ul>
           <div class="nav__social">
             <ul class="links">
@@ -292,14 +294,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../script/pandaHover.js"></script>
-    <script>
-      const wePlanLink = document.querySelectorAll(".weplan-link");
-      wePlanLink.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          let id = e.target.id;
-          sessionStorage.setItem("id", id);
-        });
-      });
-    </script>
+    <script src="../script/index.js" />
   </body>
 </html>
