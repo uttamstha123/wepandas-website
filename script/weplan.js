@@ -1,4 +1,4 @@
-const id = sessionStorage.getItem("ID");
+const id = window.sessionStorage.getItem("ID");
 const fetchData = fetch("api/weplan.json");
 fetchData
   .then((result) => {
