@@ -46,6 +46,7 @@
   left: -15%;
   top: 20%;
   display: none;
+  transition: all 1s;
 }
 .outline-text2 {
   left: 38%;
@@ -123,6 +124,13 @@ path {
   cursor: pointer;
   user-select: none;
 }
+
+/*** Transition path and navigate text ***/
+path,
+.navigateText {
+  transition: all 0.145s;
+}
+
 /*
 ******
 Hover class

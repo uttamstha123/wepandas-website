@@ -1,70 +1,31 @@
 [{
       "title": "WeLabs",
-      "description": [{
-            "subTitle": "WeStake",
-            "desc": "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks."
-      }, {
-            "subTitle": "WeMap",
-            "desc": "Holder - only access to exclusive merch through seamless integration of Web 3 and Shopify 's robust e-commerce platform."
-      }, {
-            "subTitle": "WeBook",
-            "desc": "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
-      }]
+      "subtitle": ["WeStake", "WeMap", "WeBook"],
+      "description": [
+            "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks.",
+            "Holder - only access to exclusive merch through seamless integration of Web 3 and Shopify 's robust e-commerce platform.",
+            "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
+      ]
 }, {
       "title": "WeStudio",
-      "description": [{
-            "subTitle": "Lo-Fi Music/Mix-Tapes on Spotify",
-            "desc": "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks."
-      }, {
-            "subTitle": "Digital Wallpapers for PC, MAC, Android, IOS",
-            "desc": "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform. "
-      }, {
-            "subTitle": "WeStore",
-            "desc": "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
-      }]
+      "subtitle": ["Lo-Fi Music/Mix-Tapes on Spotify", "Digital Wallpapers for PC, MAC, Android, IOS", "WeStore"],
+      "description": ["An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks.", "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform. ",
+            "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
+      ]
 }, {
       "title": "WeBrand",
-      "description": [{
-            "subTitle": "Brand Outreach Campaign ",
-            "desc": "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks."
-      }, {
-            "subTitle": "1-0-1 CSR Auction",
-            "desc": "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform."
-      }, {
-            "subTitle": "Future NFT Drops",
-            "desc": "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
-      }]
+      "subtitle": ["Brand Outreach Campaign", "1-0-1 CSR Auction", "Future NFT Drops"],
+      "description": ["An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks.", "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform.", "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."]
 }, {
       "title": "WeGallery",
-      "description": [{
-            "subTitle": "NFT Gallery",
-            "desc": "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks."
-      }, {
-            "subTitle": "Fan Art Display on Website with Artist Links/spotlight",
-            "desc": "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform."
-      }, {
-            "subTitle": "MetaVerse Gallery",
-            "desc": "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
-      }]
+      "subtitle": ["NFT Gallery", "Fan Art Display on Website with Artist Links/spotlight", "MetaVerse Gallery"],
+      "description": ["An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks.", "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform.", "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."]
 }, {
       "title": "WeDAO",
-      "description": [{
-            "subTitle": "Discord",
-            "desc": "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks."
-      }, {
-            "subTitle": "DAO Perks WL/Alpha Calls",
-            "desc": "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform."
-      }]
+      "subtitle": ["Discord", "DAO Perks WL/Alpha Calls"],
+      "description": ["An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks.", "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform."]
 }, {
       "title": "WePreneur",
-      "description": [{
-            "subTitle": "Keynotes with leaders from Mainstream/NFT Space/Other Projects",
-            "desc": "An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks."
-      }, {
-            "subTitle": "Training NFT Entrepreneurship",
-            "desc": "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform."
-      }, {
-            "subTitle": "Community Grants to Holder Intrapreneurs",
-            "desc": "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."
-      }]
+      "subtitle": ["Keynotes with leaders from Mainstream/NFT Space/Other Projects", "Training NFT Entrepreneurship", "Community Grants to Holder Intrapreneurs"],
+      "description": ["An NFT marketplace built in partnership with Magic Eden, Solana's #1 marketplace, where Okay Bears holders will buy and sell Okay Bears with member-only perks.", "Holder-only access to exclusive merch through seamless integration of Web 3 and  Shopify's robust e-commerce platform.", "Real-life activations through flash pop-up stores in cities worldwide and leading tech and crypto conferences bring holders together for memorable brand experiences."]
 }]

@@ -1,7 +1,8 @@
 :root {
   /* color */
   --primary-clr: #adadad;
-  --secondary-clr: #5f5f5f;
+  --secondary-clr: #6f6f6f;
+  --tertiary-clr: #3f3f3f;
   --link-clr: #636363;
   --ctn-clr: #212121;
   --bg-clr: #000;
@@ -224,16 +225,41 @@ We Plan Inside
   /* flex utilities is used  */
   /* so i can use gap here also */
   gap: 6em;
+  position: relative;
+}
+
+.we-section__page--number {
+  max-height: 2rem;
+  /* width: max-content; */
+  /* max-width: 20rem; */
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+}
+
+.we-section__page--number img{
+  cursor: pointer;
+}
+.we-section__page--number .number{
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--tertiary-clr);
+}
+#active{
+  color: var(--secondary-clr);
+  fill: var(--secondary-clr);
 }
 .we-section__content {
   width: 100%;
 }
 .we-section__content .title {
-  font-size: 5rem;
+  font-size: clamp(3.5rem, 5rem, 4vw);
 }
 
 .we-section__content .description {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2rem, 2vw);
 }
 .we-section__content .info {
   color: var(--secondary-clr);
@@ -252,7 +278,7 @@ We Plan Inside
   height: 100%;
   width: 70%;
   overflow: hidden;
-  background-image: url("/wepandas-website/assets/images/panda-img.png");
+  background-image: url("../../assets/images/panda-img.jpg");
   background-repeat: no-repeat;
   background-size: 150%;
   background-position: right 80%;
