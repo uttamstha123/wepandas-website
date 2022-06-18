@@ -1,4 +1,5 @@
 let id = sessionStorage.getItem("ID");
+
 const fetchData = fetch("api/weplan.json");
 fetchData
   .then((result) => {
@@ -49,41 +50,35 @@ function pageNumberState() {
 pageNumberState();
 
 // page crousel
-arrowLeft.addEventListener("click", () => {
+arrowLeft.addEventListener("click", async () => {
   let currentId = sessionStorage.getItem("ID");
   --currentId;
   sessionStorage.setItem("ID", Number(currentId));
 
-  const fetchData = fetch("api/weplan.json");
-  fetchData
-    .then((result) => {
-      return result.json();
-    })
-    .then((data) => {
-      let getData = data[currentId];
-      changeData(getData);
-    });
+  const fetchData = await fetch("api/weplan.json");
+  if (fetchData.ok) {
+    let data = await fetchData.json();
+    let getData = data[currentId];
+    changeData(getData);
+  }
   pageNumberState();
 });
 
-arrowRight.addEventListener("click", () => {
+arrowRight.addEventListener("click", async () => {
   let currentId = sessionStorage.getItem("ID");
   ++currentId;
   sessionStorage.setItem("ID", Number(currentId));
-  // console.log(pageNumber.length, currentId);
 
   if (currentId >= pageNumber.length - 1)
     sessionStorage.setItem("ID", pageNumber.length - 1);
 
-  const fetchData = fetch("api/weplan.json");
-  fetchData
-    .then((result) => {
-      return result.json();
-    })
-    .then((data) => {
-      let getData = data[currentId];
-      changeData(getData);
-    });
+  const fetchData = await fetch("api/weplan.json");
+
+  if (fetchData.ok) {
+    let data = await fetchData.json();
+    let getData = data[currentId];
+    changeData(getData);
+  }
   pageNumberState();
 });
 
@@ -112,7 +107,6 @@ function generateData(data) {
 
     const desc = data?.description[index];
 
-    console.log(element, desc);
     // updating innerText
     subtitle.innerText = element;
     info.innerText = desc;
@@ -156,6 +150,5 @@ function changeData(data) {
       info.innerText = data?.description[index];
     else info.innerText = "";
 
-    // info.innerText = "";
   });
 }
