@@ -278,7 +278,8 @@ We Plan Inside
   height: 100%;
   width: 70%;
   overflow: hidden;
-  background-image: url("/assets/images/panda-img.jpg");
+  background-image: url("../../assets/images/panda-img.jpg");
+  /* background-image: url("assets/images/panda-img.jpg"); */
   background-repeat: no-repeat;
   background-size: 150%;
   background-position: right 80%;
