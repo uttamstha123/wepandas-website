@@ -59,7 +59,9 @@ arrowLeft.addEventListener("click", async () => {
   if (fetchData.ok) {
     let data = await fetchData.json();
     let getData = data[currentId];
-    changeData(getData);
+    const content = document.querySelector(".we-section__content");
+    content.innerHTML = "";
+    generateData(getData);
   }
   pageNumberState();
 });
@@ -77,14 +79,17 @@ arrowRight.addEventListener("click", async () => {
   if (fetchData.ok) {
     let data = await fetchData.json();
     let getData = data[currentId];
-    changeData(getData);
+    const content = document.querySelector(".we-section__content");
+    content.innerHTML = "";
+    generateData(getData);
   }
   pageNumberState();
 });
 
 function generateData(data) {
   // access title and change innerText of title in DOM
-  const title = document.getElementById("title");
+  const section = document.querySelector(".we-section__content");
+  const title = document.createElement("h2");
   title.classList.add("title");
   // Break two section 'WE' - 'other part'
   title.innerText = data?.title.slice(0, 2); // 'WE'
@@ -96,8 +101,11 @@ function generateData(data) {
 
   title.appendChild(accentText);
 
+  section.appendChild(title);
+
   // Description Section
-  const description = document.getElementById("description");
+  const description = document.createElement("div");
+  description.classList.add("description", "flex", "flex-col");
   data?.subtitle.forEach((element, index) => {
     // Creating elements
     const container = document.createElement("div");
@@ -120,35 +128,5 @@ function generateData(data) {
 
     description.appendChild(container);
   });
-}
-
-function changeData(data) {
-  // access title and change innerText of title in DOM
-  const title = document.getElementById("title");
-  // Break two section 'WE' - 'other part'
-  title.innerText = data?.title.slice(0, 2); // 'WE'
-
-  // create span element for accent text
-  const accentText = document.createElement("span");
-  accentText.classList.add("accent-text");
-  accentText.innerText = data?.title.slice(2); // 'other part'
-
-  title.appendChild(accentText);
-
-  const subtitles = document.querySelectorAll(".sub-title");
-  const infos = document.querySelectorAll(".info");
-
-  // updating innerText
-  const elements = data?.subtitle;
-  // const element = data?.description;
-  subtitles.forEach((subtitle, index) => {
-    if (index < data?.subtitle.length) subtitle.innerText = elements[index];
-    else subtitle.innerText = "";
-  });
-  infos.forEach((info, index) => {
-    if (index < data?.description.length)
-      info.innerText = data?.description[index];
-    else info.innerText = "";
-
-  });
+  section.appendChild(description);
 }
