@@ -172,3 +172,11 @@ Toggle class
 .display-navigate-text {
   display: block;
 }
+
+svg {
+  user-select: none;
+  pointer-events: none;
+}
+path {
+  pointer-events: all;
+}
