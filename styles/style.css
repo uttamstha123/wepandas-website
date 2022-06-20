@@ -1,5 +1,5 @@
 :root {
-  /* color */
+  /* color pallate for dark mode*/
   --primary-clr: #adadad;
   --secondary-clr: #6f6f6f;
   --tertiary-clr: #3f3f3f;
@@ -8,8 +8,31 @@
   --bg-clr: #000;
   --accent-clr: #43e07d;
 
+  /***** Fonts *****/
   --ff-primary: "Helvetica Now Text", Helvetica;
   --ff-secondary: "Source Sans Pro", sans-serif;
+
+  /***** Font Size *****/
+
+  /* 
+  clamp(min,default,max) 
+    - it is a responsive way to set font sizes 
+    - min : when viewport width is small font size will decrease upto min value
+    - default : the font size you want to set as per design
+    - max : if viewport is very larger the maximum it will go to max value
+   */
+
+  /* Small font size */
+  --fs-small: clamp(1rem, 1.2rem, 1.05vw);
+
+  /* Normal font size */
+  --fs-normal-0: clamp(1.2rem, 1.4rem, 1.2vw);
+  --fs-normal-1: clamp(1.5rem, 2rem, 1.6vw);
+
+  /* Larger font size */
+  --fs-large: clamp(2.2rem, 3.8rem, 3.2vw);
+  --fs-large-0: clamp(2.5rem, 4.2rem, 3.6vw);
+  --fs-large-1: clamp(3.5rem, 5rem, 4vw);
 }
 
 *,
@@ -54,6 +77,7 @@ img {
   max-width: 100%;
 }
 a {
+  font-size: 100%;
   color: inherit;
   text-decoration: none;
 }
@@ -91,7 +115,7 @@ Home Page - Header
   margin: 0 auto;
   min-height: 10vh;
   font-family: var(--ff-primary);
-  font-size: 1.4rem;
+  font-size: var(--fs-normal-0);
 }
 
 .nav__links {
@@ -168,7 +192,7 @@ Home Page - Hero Section
   transform: translateY(-5vh);
 }
 .hero-section__title {
-  font-size: 2rem;
+  font-size: var(--fs-normal-1);
   text-align: center;
 }
 .wrapper {
@@ -179,7 +203,7 @@ Home Page - Hero Section
   display: flex;
   gap: 10px;
   overflow: hidden;
-  font-size: 4.2rem;
+  font-size: var(--fs-large-0);
 }
 
 /*
@@ -239,15 +263,15 @@ We Plan Inside
   right: 5%;
 }
 
-.we-section__page--number img{
+.we-section__page--number img {
   cursor: pointer;
 }
-.we-section__page--number .number{
-  font-size: 1.4rem;
+.we-section__page--number .number {
+  font-size: var(--fs-normal-0);
   font-weight: 300;
   color: var(--tertiary-clr);
 }
-#active{
+#active {
   color: var(--secondary-clr);
   fill: var(--secondary-clr);
 }
@@ -255,11 +279,11 @@ We Plan Inside
   width: 100%;
 }
 .we-section__content .title {
-  font-size: clamp(3.5rem, 5rem, 4vw);
+  font-size: var(--fs-large-1);
 }
 
 .we-section__content .description {
-  font-size: clamp(1.5rem, 2rem, 2vw);
+  font-size: var(--fs-normal-1);
 }
 .we-section__content .info {
   color: var(--secondary-clr);
