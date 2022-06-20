@@ -173,10 +173,10 @@ Toggle class
   display: block;
 }
 
-svg {
+.section svg {
   user-select: none;
   pointer-events: none;
 }
-path {
+.section path {
   pointer-events: all;
 }
