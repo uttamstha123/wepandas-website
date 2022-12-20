@@ -8,10 +8,10 @@
   /* height: 90vh;
       width: 100%; */
   height: auto;
-  height: 90vh;
+  height: 88vh;
+  margin-top: auto;
   position: relative;
 }
-
 .outline {
   display: flex;
   transform: translateY(25%);
@@ -38,15 +38,16 @@
 }
 
 .navigateText {
-  font-size: 3.5rem;
+  font-size: var(--fs-large);
   font-family: var(--ff-primary);
   position: absolute;
   /* display: none; */
 }
 .outline-text1 {
-  left: -15%;
-  top: 20%;
+  left: -18%;
+  top: 25%;
   display: none;
+  transition: all 1s;
 }
 .outline-text2 {
   left: 38%;
@@ -54,8 +55,8 @@
   display: none;
 }
 .outline-text3 {
-  right: -15%;
-  top: 20%;
+  right: -18%;
+  top: 28%;
   display: none;
 }
 .outline-text4 {
@@ -69,7 +70,7 @@
   display: none;
 }
 .outline-text6 {
-  right: -15%;
+  right: -18%;
   bottom: 20%;
   display: none;
 }
@@ -122,14 +123,22 @@
 
 path {
   cursor: pointer;
+  user-select: none;
 }
+
+/*** Transition path and navigate text ***/
+path,
+.navigateText {
+  transition: all 0.145s;
+}
+
 /*
 ******
 Hover class
 ******
 */
 
-.ear-left-path:hover {
+/* .ear-left-path:hover {
   fill: var(--primary-clr);
 }
 .ear-right-path:hover {
@@ -146,14 +155,14 @@ Hover class
 }
 .mouth-path:hover {
   fill: var(--primary-clr);
-}
+} */
 
 /*
 ******
 Toggle class
 ******
 */
-.outline-hover {
+.fill-hover {
   fill: var(--primary-clr);
 }
 .outlineBox-hover {
@@ -162,4 +171,12 @@ Toggle class
 
 .display-navigate-text {
   display: block;
+}
+
+.section svg {
+  user-select: none;
+  pointer-events: none;
+}
+.section path {
+  pointer-events: all;
 }
