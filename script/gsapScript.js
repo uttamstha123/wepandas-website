@@ -12,12 +12,17 @@ let tl = gsap.timeline({
     // markers: true
   },
 });
-gsap.set("h1", {
+gsap.set(".hero-section__title", {
   scale: 4.5,
   transform: "translateY(100%)",
 });
 tl.to(".hero-section__title", { duration: 2, scale: 1, ease: "sine.out" })
   .to(".hero-section__title", {
+    duration: 2,
+    ease: "sine.out",
+    transform: "translateY(0)",
+  })
+  .to(".nav", {
     duration: 2,
     ease: "sine.out",
     transform: "translateY(0)",
@@ -42,5 +47,5 @@ tl.to(".hero-section__title", { duration: 2, scale: 1, ease: "sine.out" })
         word.classList.add("animateWord");
       },
     },
-    "sameTime-=0.5"
+    "sameTime-=1"
   );

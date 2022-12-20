@@ -11,39 +11,28 @@ JQuery Section
 ********
 */
 function toggleHoverClass(child, pandaText, outline, outlineBox) {
-  $(child).hover(
-    function () {
-      $(outline).addClass("outline-hover");
-    },
-    function () {
-      $(outline).removeClass("outline-hover");
-    }
-  );
-  $(child).hover(
-    function () {
-      $(outlineBox).addClass("outlineBox-hover");
-    },
-    function () {
-      $(outlineBox).removeClass("outlineBox-hover");
-    }
-  );
-  $(child).hover(
-    function () {
-      $(pandaText).addClass("display-navigate-text");
-    },
-    function () {
-      $(pandaText).removeClass("display-navigate-text");
-    }
-  );
+  $(child).addClass("fill-hover");
+  $(outline).addClass("fill-hover");
+  $(outlineBox).addClass("outlineBox-hover");
+  $(pandaText).addClass("display-navigate-text");
 }
 
+function toggleHoverClass1(child, pandaText, outline, outlineBox) {
+  $(child).removeClass("fill-hover");
+  $(outline).removeClass("fill-hover");
+  $(outlineBox).removeClass("outlineBox-hover");
+  $(pandaText).removeClass("display-navigate-text");
+}
 const pandaFace = [earLeft, nose, earRight, eyeLeft, mouth, eyeRight];
 
 pandaFace.forEach((panda, index) => {
+  let outline = document.querySelector(`.outline-${index + 1}`);
+  let outlineBox = document.querySelector(`.outline-box${index + 1}`);
+  let pandaText = outlineBox.nextSibling;
   panda.addEventListener("mouseover", () => {
-    let outline = document.querySelector(`.outline-${index + 1}`);
-    let outlineBox = document.querySelector(`.outline-box${index + 1}`);
-    let pandaText = outlineBox.nextSibling;
     toggleHoverClass(panda, pandaText, outline, outlineBox);
+  });
+  panda.addEventListener("mouseout", () => {
+    toggleHoverClass1(panda, pandaText, outline, outlineBox);
   });
 });
